@@ -1,9 +1,9 @@
-import { getLocation } from '../logic/logic.js';
+import { getLocationData } from '../logic/logic.js';
 
 // Create a function to attach an event listener on search button
 export function attachEventSearchButton() {
     const searchButton = document.getElementById('search');
     searchButton.addEventListener('click', () => {
-        getLocation();
+        getLocationData();
     })
 }
