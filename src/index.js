@@ -19,3 +19,14 @@ async function getLocationData() {
         console.log(err);
     }
 }
+
+// Create a function to turn JSON data to JS object
+async function turnDataToObject() {
+    try {
+        const locationData = await getLocationData();
+        const data = await locationData.json();
+        return data;
+    } catch {
+        console.log(err);
+    }
+}
