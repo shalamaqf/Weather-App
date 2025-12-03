@@ -1,5 +1,5 @@
 // Create a function to set up the form and get the location
-function getLocation() {
+export function getLocation() {
     const location = document.getElementById('location');
     console.log(location);
     return location;
