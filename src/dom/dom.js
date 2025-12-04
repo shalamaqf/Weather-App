@@ -3,12 +3,8 @@ import { getInfo, getGif } from '../logic/logic.js';
 // Create a function to attach an event listener on search button
 export function attachEventSearchButton() {
     const searchButton = document.getElementById('search');
-    searchButton.addEventListener('click', async () => {
-        try {
-            await showInfo();
-        } catch (err) {
-            console.log(err);
-        }
+    searchButton.addEventListener('click', () => {
+        searchButtonOnClick(searchButton);
     })
 }
 
@@ -74,4 +70,15 @@ async function showInfo() {
     } catch (err) {
         console.log(err);
     }
+}
+
+// Create an async function to disable the search button when async codes run
+async function searchButtonOnClick(searchBtn) {
+    searchBtn.disabled = true;
+
+    // Run async codes
+    await showInfo();
+
+    // Enabled the search button
+    searchBtn.disabled = false;
 }
