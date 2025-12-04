@@ -12,7 +12,7 @@ async function getLocationData() {
         const location = getLocation();
         const locationData = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${key}`);
         return locationData;
-    } catch {
+    } catch (err) {
         console.log(err);
     }
 }
@@ -23,7 +23,7 @@ async function turnDataToObject() {
         const locationData = await getLocationData();
         const data = await locationData.json();
         return data;
-    } catch {
+    } catch (err) {
         console.log(err);
     }
 }
@@ -56,7 +56,7 @@ export async function getGif() {
         const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=${key}&s=${condition}`);
         const data = await response.json();
         img.src = data.data.images.original.url;
-    } catch {
+    } catch (err) {
         console.log(err);
     }
 }
