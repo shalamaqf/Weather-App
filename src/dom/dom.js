@@ -7,6 +7,7 @@ export function attachEventSearchButton() {
         try {
             await showTemps();
             await showLocation();
+            await showCondition();
             await getGif();
         } catch (err) {
             console.log(err);
@@ -37,6 +38,18 @@ async function showLocation() {
         const data = await getInfo();
         const text = data.location;
         location.textContent = text.charAt(0).toUpperCase() + text.slice(1);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+// Create an async function to show the weather's condition
+async function showCondition() {
+    const condition = document.querySelector('.text.condition');
+
+    try {
+        const data = await getInfo();
+        condition.textContent = data.condition;
     } catch (err) {
         console.log(err);
     }
