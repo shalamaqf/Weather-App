@@ -5,10 +5,7 @@ export function attachEventSearchButton() {
     const searchButton = document.getElementById('search');
     searchButton.addEventListener('click', async () => {
         try {
-            await showTemps();
-            await showLocation();
-            await showCondition();
-            await showGif();
+            await showInfo();
         } catch (err) {
             console.log(err);
         }
@@ -62,6 +59,18 @@ async function showGif() {
     try {
         const data = await getGif();
         gif.src = data.data.images.original.url; 
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+// Create an async function to show the info
+async function showInfo() {
+    try {
+        await showTemps();
+        await showLocation();
+        await showCondition();
+        await showGif();
     } catch (err) {
         console.log(err);
     }
