@@ -30,18 +30,23 @@ async function turnDataToObject() {
 
 // Create an async function to get the info (location, temps, and weather condition)
 export async function getInfo() {
-    const data = await turnDataToObject();
-    const location = data.address;
-    const fahrenheit = Math.trunc(data.currentConditions.temp);
-    const celcius = Math.trunc((fahrenheit - 32) * 5/9);
-    const condition = data.currentConditions.conditions;
+    try {
+        const data = await turnDataToObject();
+        const location = data.address;
+        const fahrenheit = Math.trunc(data.currentConditions.temp);
+        const celcius = Math.trunc((fahrenheit - 32) * 5/9);
+        const condition = data.currentConditions.conditions;
 
-    return {
-        location,
-        fahrenheit,
-        celcius,
-        condition
+        return {
+            location,
+            fahrenheit,
+            celcius,
+            condition
+        }
+    } catch (err) {
+        console.log(err);
     }
+
 }
 
 // Create an async function to get a gif based on the weather condition
