@@ -99,3 +99,11 @@ function showLoader() {
     // Add show class
     loaderContainer.classList.add('show');
 }
+
+// Create a function to hide the loader
+function hideLoader() {
+    const loaderContainer = document.getElementById('loader-container');
+
+    // Remove show class
+    loaderContainer.classList.remove('show');
+}
