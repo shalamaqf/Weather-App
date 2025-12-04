@@ -32,8 +32,8 @@ async function turnDataToObject() {
 export async function getInfo() {
     const data = await turnDataToObject();
     const location = data.address;
-    const fahrenheit = data.currentConditions.temp;
-    const celcius = (fahrenheit - 32) * 5/9;
+    const fahrenheit = Math.trunc(data.currentConditions.temp);
+    const celcius = Math.trunc((fahrenheit - 32) * 5/9);
     const condition = data.currentConditions.conditions;
 
     return {
