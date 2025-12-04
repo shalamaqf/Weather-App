@@ -91,3 +91,11 @@ export function animateDots() {
         dot.classList.add('loading');
     })
 }
+
+// Create a function to show the loader
+function showLoader() {
+    const loaderContainer = document.getElementById('loader-container');
+
+    // Add show class
+    loaderContainer.classList.add('show');
+}
