@@ -6,8 +6,9 @@ export function attachEventSearchButton() {
     searchButton.addEventListener('click', async () => {
         try {
             await showTemps();
+            await showLocation();
             await getGif();
-        } catch(err) {
+        } catch (err) {
             console.log(err);
         }
     })
@@ -23,6 +24,19 @@ async function showTemps() {
         const data = await getInfo();
         celcius.textContent = data.celcius + '°C';
         fahrenheit.textContent = data.fahrenheit + '°F';
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+// Create an async function to show the location
+async function showLocation() {
+    const location = document.querySelector('.text.location');
+
+    try {
+        const data = await getInfo();
+        const text = data.location;
+        location.textContent = text.charAt(0).toUpperCase() + text.slice(1);
     } catch (err) {
         console.log(err);
     }
