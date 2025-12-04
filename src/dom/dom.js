@@ -82,3 +82,12 @@ async function searchButtonOnClick(searchBtn) {
     // Enabled the search button
     searchBtn.disabled = false;
 }
+
+// Create a function to animate dots when loading
+export function animateDots() {
+    let dots = document.querySelectorAll('.loader');
+   
+    dots.forEach(dot => {
+        dot.classList.add('loading');
+    })
+}

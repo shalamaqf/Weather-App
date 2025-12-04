@@ -63,12 +63,3 @@ export async function getGif() {
         console.log(err);
     }
 }
-
-// Create a function to animate dots when loading
-export function animateDots() {
-    let dots = document.querySelectorAll('.loader');
-   
-    dots.forEach(dot => {
-        dot.classList.add('loading');
-    })
-}
