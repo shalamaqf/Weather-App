@@ -30,9 +30,17 @@
 
   font-size: 2rem;
   color: rgba(80, 80, 80, 1);
+  animation: bounce 1s ease-in-out infinite alternate;;
 }
 
-/* Increase dot size when load */
-.loading {
-  font-size: 2.3rem;
+.loader.one { animation-delay: 0s; }
+.loader.two { animation-delay: 0.2s; }
+.loader.three { animation-delay: 0.4s; }
+
+
+/* Animate dot size when load */
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.5); }
+  100% { transform: scale(1); }
 }
