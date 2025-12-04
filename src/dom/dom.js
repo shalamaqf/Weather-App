@@ -8,7 +8,7 @@ export function attachEventSearchButton() {
             await showTemps();
             await showLocation();
             await showCondition();
-            await getGif();
+            await showGif();
         } catch (err) {
             console.log(err);
         }
@@ -50,6 +50,18 @@ async function showCondition() {
     try {
         const data = await getInfo();
         condition.textContent = data.condition;
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+// Create an async function to show the gif
+async function showGif() {
+    const gif = document.getElementById('giphy');
+
+    try {
+        const data = await getGif();
+        gif.src = data.data.images.original.url; 
     } catch (err) {
         console.log(err);
     }
