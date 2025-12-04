@@ -63,3 +63,12 @@ export async function getGif() {
         console.log(err);
     }
 }
+
+// Create a function to increase dots size when loading
+export function increaseDotSize() {
+    let dots = document.querySelectorAll('.loader');
+   
+    dots.forEach(dot => {
+        dot.classList.add('loading');
+    })
+}
