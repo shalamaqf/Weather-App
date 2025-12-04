@@ -64,8 +64,8 @@ export async function getGif() {
     }
 }
 
-// Create a function to increase dots size when loading
-export function increaseDotSize() {
+// Create a function to animate dots when loading
+export function animateDots() {
     let dots = document.querySelectorAll('.loader');
    
     dots.forEach(dot => {
