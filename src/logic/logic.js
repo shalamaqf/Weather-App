@@ -51,8 +51,6 @@ export async function getInfo() {
 
 // Create an async function to get a gif based on the weather condition
 export async function getGif() {
-    // Select the img element
-    const img = document.getElementById('giphy');
     // API's key
     const key = 'zc2pqdzUxA0yZUCPY9ckOzh0o8Dbpodk';
     try {
@@ -60,7 +58,7 @@ export async function getGif() {
         const condition = info.condition;
         const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=${key}&s=${condition}`);
         const data = await response.json();
-        img.src = data.data.images.original.url;
+        return data;
     } catch (err) {
         console.log(err);
     }
