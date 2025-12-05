@@ -98,6 +98,9 @@ function showLoader() {
 
     // Add show class
     loaderContainer.classList.add('show');
+
+    // Animate the dots
+    animateDots();
 }
 
 // Create a function to hide the loader
