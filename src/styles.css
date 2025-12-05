@@ -43,6 +43,11 @@ main {
   gap: 0.5rem;
 }
 
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
 
 /* Loader */
 #loader-container {
