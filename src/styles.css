@@ -35,7 +35,13 @@ main {
   align-items: center;
 }
 
+#location-form-container {
+  width: 100%;
 
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
 
 
 /* Loader */
