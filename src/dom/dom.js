@@ -136,14 +136,10 @@ function clearContent() {
     gif.src = '';
 }
 
-// Create an async function to show the error
-async function showError() {
+// Create a function to show the error
+function showError() {
     const error = document.getElementById('error');
-    const result = await getLocationData();
-
-    if (result === true) {
-        error.textContent = 'Location not found.';
-    }
+    error.textContent = 'Location not found.';
 }
 
 // Create an async function to check the error from API response
