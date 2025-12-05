@@ -16,6 +16,10 @@ async function showTemps() {
 
     try {
         const data = await getInfo();
+
+        // Hide the loader 
+        hideLoader();
+
         celcius.textContent = data.celcius + '°C';
         fahrenheit.textContent = data.fahrenheit + '°F';
     } catch (err) {
@@ -75,6 +79,12 @@ async function showInfo() {
 // Create an async function to disable the search button when async codes run
 async function searchButtonOnClick(searchBtn) {
     searchBtn.disabled = true;
+
+    // Clear content
+    clearContent();
+
+    // Show the loader
+    showLoader();
 
     // Run async codes
     await showInfo();
