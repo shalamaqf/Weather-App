@@ -9,8 +9,11 @@
     <header>Weather App</header>
     <main>
         <div id="location-form-container">
-            <label for="location"></label>
-            <input type="text" id="location" placeholder="Enter a location...">
+            <div class="input-container">
+                <label for="location"></label>
+                <input type="text" id="location" placeholder="Enter a location...">
+                <span class="error" aria-live="polite"></span>
+            </div>
             <button id="search">Search</button>
         </div>
         <div class="container content">
