@@ -17,6 +17,9 @@ async function showTemps() {
     try {
         const data = await getInfo();
 
+        // Check error
+        checkError();
+
         // Hide the loader 
         hideLoader();
 
