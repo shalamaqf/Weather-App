@@ -11,9 +11,14 @@ async function getLocationData() {
     try {
         const location = getLocation();
         const locationData = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${key}`);
+
+        // Check response status
+        if (!locationData.ok) {
+            throw new Error ();
+        }
         return locationData;
     } catch (err) {
-        console.log(err);
+        return true;
     }
 }
 
