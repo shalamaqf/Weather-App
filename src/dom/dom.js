@@ -145,3 +145,13 @@ async function showError() {
         error.textContent = 'Location not found.';
     }
 }
+
+// Create an async function to check the error from API response
+async function checkError() {
+    const result = await getLocationData();
+    if (result === true) {
+        showError();
+    } else {
+        hideError();
+    }
+}
