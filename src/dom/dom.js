@@ -142,6 +142,12 @@ function showError() {
     error.textContent = 'Location not found.';
 }
 
+// Create a function to hide the error
+function hideError() {
+    const error = document.getElementById('error');
+    error.textContent = '';
+}
+
 // Create an async function to check the error from API response
 async function checkError() {
     const result = await getLocationData();
