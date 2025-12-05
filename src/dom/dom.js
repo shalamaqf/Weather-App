@@ -1,4 +1,4 @@
-import { getInfo, getGif } from '../logic/logic.js';
+import { getInfo, getGif, getLocationData } from '../logic/logic.js';
 
 // Create a function to attach an event listener on search button
 export function attachEventSearchButton() {

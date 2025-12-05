@@ -6,7 +6,7 @@ function getLocation() {
 
 /* Create an async function to receive the location input
    and fetch the location JSON data */
-async function getLocationData() {
+export async function getLocationData() {
     const key = '2F8ZWAB7SDMAQ7TREVK5VY772';
     try {
         const location = getLocation();
