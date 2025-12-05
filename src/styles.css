@@ -33,6 +33,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3rem;
 }
 
 #location-form-container {
@@ -53,6 +54,11 @@ main {
 }
 
 .container.content {
+  display: flex;
+  gap: 5rem;
+}
+
+.container.info {
   display: flex;
   flex-direction: column;
   align-items: center;
