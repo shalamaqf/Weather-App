@@ -110,3 +110,18 @@ function hideLoader() {
     // Remove show class
     loaderContainer.classList.remove('show');
 }
+
+// Create a function to clear main content
+function clearContent() {
+    const celciusTemp = document.querySelector('.data.celcius');
+    const fahrenheitTemp = document.querySelector('.data.fahrenheit');
+    const location = document.querySelector('.text.location');
+    const condition = document.querySelector('.text.condition');
+    const gif = document.getElementById('giphy');
+    
+    celciusTemp.textContent = '';
+    fahrenheitTemp.textContent = '';
+    location.textContent = '';
+    condition.textContent = '';
+    gif.src = '';
+}
