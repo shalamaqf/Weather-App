@@ -7,6 +7,21 @@
   box-sizing: border-box;
 }
 
+/* Layout */
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+
+
 /* Loader */
 #loader-container {
   display: none;
