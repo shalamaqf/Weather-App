@@ -60,7 +60,8 @@ main {
 .container.content {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 15rem;
+  margin-top: 2rem;
 }
 
 .container.info {
@@ -72,7 +73,7 @@ main {
 
 .container.data {
   display: flex;
-  gap: 1rem
+  gap: 2rem;
 }
 
 
@@ -114,6 +115,21 @@ header {
 #search:hover {
   background-color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.data {
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.text.location{
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.text.condition {
+  font: 1rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 
