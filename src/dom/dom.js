@@ -160,3 +160,16 @@ async function checkError() {
         hideError();
     }
 }
+
+// Create a function to check the img element src
+export function checkImgSource() {
+    const img = document.getElementById('giphy');
+
+    img.onerror = () => {
+        img.style.display = 'none';
+    }
+
+    img.onload = () => {
+        img.style.display = 'block';
+    }
+}
