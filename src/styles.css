@@ -79,6 +79,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
   height: 5vh;
 }
 
@@ -147,14 +149,14 @@ header {
   padding: 1.3rem;
 }
 
-footer {
-  color: rgba(255, 255, 255, 1);
-}
-
 #giphy {
   aspect-ratio: 10/10;
 }
 
+footer {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 64, 128, 1);
+}
 
 /* Loader */
 #loader-container {
