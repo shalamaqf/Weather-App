@@ -108,7 +108,15 @@ header {
   border-radius: 2px;
   font-size: 1rem;
   padding: 0.08rem 0.5rem;
+  cursor: pointer;
 }
+
+#search:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+
 
 /* Loader */
 #loader-container {
