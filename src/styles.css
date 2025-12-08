@@ -155,8 +155,10 @@ header {
 }
 
 #giphy {
-  width: 50vh;
-  height: 50vh;
+  width: clamp(120px, 40vw, 400px);
+  height: clamp(120px, 40vw, 400px);
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0);
 }
 
 footer {
