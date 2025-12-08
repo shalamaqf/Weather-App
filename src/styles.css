@@ -211,3 +211,8 @@ footer {
   50%  { transform: scale(1.5); }
   100% { transform: scale(1); }
 }
+
+/* Hide the img when first load */
+#giphy {
+  display: none;
+}
