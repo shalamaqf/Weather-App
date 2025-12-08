@@ -160,6 +160,10 @@ footer {
   background-color: rgba(0, 64, 128, 1);
 }
 
+#error {
+  color: rgba(150, 20, 20, 1);
+}
+
 /* Loader */
 #loader-container {
   display: none;
