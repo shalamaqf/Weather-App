@@ -24,8 +24,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
-  padding-left: 10rem;  
+  padding-left: 21%;
 }
 
 main {
@@ -61,7 +60,7 @@ main {
   display: flex;
   align-items: center;
   gap: 15rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .container.info {
