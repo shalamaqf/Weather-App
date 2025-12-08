@@ -100,7 +100,15 @@ header {
   padding: 0.1rem 0.5rem;
 }
 
+#search {
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: rgba(0, 80, 160, 1);
 
+  border-radius: 2px;
+  font-size: 1rem;
+  padding: 0.08rem 0.5rem;
+}
 
 /* Loader */
 #loader-container {
