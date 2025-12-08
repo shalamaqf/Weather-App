@@ -19,11 +19,13 @@ body {
 
 header {
   width: 100%;
-  height: 5vh;
+  height: 8vh;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+
+  padding-left: 10rem;  
 }
 
 main {
@@ -80,6 +82,12 @@ body {
   background-size: cover;
   background-position: center;
   font-family: "Roboto", sans-serif;
+}
+
+header {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
 }
 
 
