@@ -155,7 +155,8 @@ header {
 }
 
 #giphy {
-  aspect-ratio: 10/10;
+  width: 50vh;
+  height: 50vh;
 }
 
 footer {
