@@ -140,15 +140,6 @@ header {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.container.giphy {
-  width: 100%;
-  max-width: 30vw;
-
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  padding: 1.3rem;
-}
-
 #giphy {
   aspect-ratio: 10/10;
 }
